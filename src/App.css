@@ -1,0 +1,18 @@
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.p-datatable .p-datatable-tbody>tr>td {
+    text-align: left;
+    border: 1px solid #000;
+    padding: 0.5rem 0.5rem;
+}
+
+.p-datatable-emptymessage {}
