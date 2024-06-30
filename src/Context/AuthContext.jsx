@@ -23,13 +23,6 @@ const AuthContext = ({ children }) => {
         }
     }
 
-
-
-
-
-
-
-
     return (
         <AuthContexProvider.Provider value={{ data, pagination, loading, error, setSearch, UserDataFetch }}>
             {children}

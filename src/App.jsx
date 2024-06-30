@@ -4,21 +4,27 @@ import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import "./App.css"
-import UserTable from './Component/Users/Table/UserTable';
-import { useAuthContext } from './Context/AuthContext';
+import { Route, Routes } from "react-router-dom"
+import Login from './Pages/Login';
+import Register from './Pages/Register';
+import Product from './Pages/Product';
+import Cart from './Pages/Cart';
+import User from './Pages/User';
+import Profile from './Pages/Profile';
 
 const App = () => {
-  const { setSearch } = useAuthContext()
   return (
-    <div className='container-fluid'>
-
-      <div className='d-flex justify-content-center p-5 mb-3 bg-secondary'>
-        <input type="search" onChange={(event) => setSearch(event.target.value)} className='form-control w-25' />
-      </div>
-
-      <UserTable />
-
-    </div>
+    <>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/" element={<Product />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </>
   )
 }
 
